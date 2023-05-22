@@ -1,0 +1,39 @@
+:root {
+    --red: #FF0000;
+    --white: #ffffff;
+    --white1: #ffffff;
+    --green: #2ecc40;
+    --orange-mate: #ff851b;
+
+    --letters-main: #ffffff;
+    --letters-alter: #000000;
+    --letters-hl: #ff851b;
+    --letters-hl-shadow: #ffad66;
+    --letters-hl-strong: #ff7700;
+    --letters-hl-1: #000000;
+
+    --black: #000000;
+    --black-ll: #4d4d4d;
+    --black-hl: #030303;
+
+
+    --mpipes: #ff522a;
+    --mpipes-hl: #ff2f00;
+    --mpipes-ll: #ff8266;
+
+    --dark: #1D1D1D;
+    
+    /* Legacy */
+
+    --image-gradient: linear-gradient(
+      to bottom left,
+      var(--white1), var(--white)
+    ); /* bg mainpage topside */
+    --image-gradient-dark: linear-gradient(
+      to bottom left,
+      var(--orange-mate), var(--orange-mate)
+    ); /* bg mainpage downside */
+
+  
+    --imp-text-color: #ffffff;
+  }
