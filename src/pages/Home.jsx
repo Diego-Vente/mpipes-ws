@@ -1,7 +1,7 @@
 import {React, Linking} from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import homeLogo from '../assets/agile-mpipes.png';
+import homeLogo from '../assets/agile-orange.png';
 //import Particle from '../components/Particle';
 import About from '../components/Home/About';
 import Type from '../components/Home/Type';
@@ -59,7 +59,7 @@ const Home = () => {
                 <Type />
               </div> */}
             </Col>
-{/* 
+{
             <Col className="img-main-screen" md={7} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}
@@ -67,7 +67,7 @@ const Home = () => {
                 className="img-fluid"
                 
               />
-            </Col> */}
+            </Col>}
           </Row>
         </Container>
 

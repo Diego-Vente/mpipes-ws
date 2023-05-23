@@ -32,9 +32,9 @@ const About = () => {
             </Row>
             <Row>
               <Col md={12} className="home-about-social">
-                <h1>FIND ME ON</h1>
+                <h1>ENCUENTRANOS EN</h1>
                 <p>
-                Please don't hesitate to reach out to me and <span className="about-hl">connect.</span>
+                Por favor, no dude en ponerse en contacto con nosotros y <span className="about-hl">conectarse.</span>
                 </p>
                 <ul className="home-about-social-links">
                   <li className="social-icons">

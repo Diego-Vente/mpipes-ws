@@ -25,10 +25,12 @@ html {
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background-color: #0c0513; /* preload screen color */
-    background-image: url(./assets/pre.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #000000; /* preload screen color */
+    background-image: url(./assets/pre.svg), url(./assets/logo-white.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center 100px;
+    background-size: auto, 40%; /* Set the size of the second background image */
+
   }
   
   #preloader-none {
@@ -92,7 +94,7 @@ html {
   
   .navbar-toggler span {
     display: block !important;
-    background-color: var(--white) !important;
+    background-color: var(--black) !important; /* menu and cross color */
     height: 4px !important;
     width: 27px !important;
     margin-top: 5px !important;
@@ -139,7 +141,7 @@ html {
     .navbar {
       padding: 1rem 2rem !important;
       font-size: 1.4rem !important;
-      background-color: #181a27 !important;
+      background-color: var(--white) !important;
     }
     .navbar-nav .nav-item a::after {
       display: none !important;
@@ -257,11 +259,11 @@ html {
     background-position: top center;
     background-repeat: no-repeat;
     padding-bottom: 30px ;
-    padding-top: 30px !important;
+    padding-top: 0px !important;
   }
   
   .home-content {
-    padding: 9rem 0 2rem !important;
+    padding: 5rem 0 2rem !important;
     color: var(--black);
     text-align: left;
   
@@ -311,9 +313,9 @@ html {
 /*     .heading-name-btns {
       
     } */
-    .img-main-screen{
+/*     .img-main-screen{
       display: none;
-    }
+    } */
 
 }
   
@@ -452,7 +454,7 @@ html {
   
   .footer-copywright span {
    color: white;
-   font-size: 1.2rem;
+   font-size: 1rem;
   }
 
   .footer-body {
@@ -491,12 +493,81 @@ html {
   
   .about-section {
     position: relative !important;
-    padding-top: 150px !important;
-    padding-bottom: 30px !important;
+    padding: 5rem 0 2rem !important;
+    
     background-image: var(--image-gradient) !important;
     color: var(--black) !important; /* color for techs icons */
   }
-  
+  #tooltip{
+    position: relative;
+    cursor: pointer;
+    /* border-bottom: 2px dotted; */
+    padding: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  #tooltipText{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 12px;
+    background-color: var(--letters-hl);
+    white-space: normal;
+    width: 100%; /* Adjusted width to fit the parent container */
+    max-width: 200px; /* Set a maximum width to prevent excessive expansion */
+    word-break: break-word;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  @media (max-width: 767px) {
+    .tooltipText {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      font-size: 10px;
+      background-color: var(--letters-hl);
+      white-space: normal;
+      width: 200px;
+      word-break: break-word;
+      padding: 10px 15px;
+      border-radius: 7px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  }
+  #tooltopText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+  }
+  #tooltip:hover #tooltipText{
+    position: absolute;
+    top: -150%;
+    visibility: visible;
+    opacity: 1;
+  }
+/*   .tooltip {
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px;
+    z-index: 1;
+  } */
   .tech-icons {
     font-size: 4.5em !important;
     margin: 15px !important;
@@ -510,6 +581,8 @@ html {
     box-shadow: 4px 5px 4px 3px var(--letters-hl-shadow) !important; /* squares sombra de linea */
     overflow: hidden !important;
     transition: all 0.4s ease 0s !important;
+    position: relative; /* Add this property to make the tooltip relative to the parent */
+    z-index: 1; 
   }
   
   @media (max-width: 767px) {
@@ -523,6 +596,7 @@ html {
     overflow: hidden !important;
     border: 2.2px solid var(--letters-hl-strong) !important; /* squares on hover */
   }
+
   .tech-icon-images {
     padding: 20px !important;
     line-height: 1.6 !important;
@@ -551,13 +625,15 @@ html {
 /* Projects */
 /* --------- */
 .project-section {
+  
   position: relative !important;
-  padding-top: 150px !important;
+  padding: 5rem 0 2rem !important;
   padding-bottom: 30px !important;
   background-image: var(--image-gradient) !important;
 }
 
 .project-card {
+  
   padding-top: 50px !important;
   padding-bottom: 50px !important;
   padding-left: 25px !important;
