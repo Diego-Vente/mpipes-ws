@@ -14,7 +14,7 @@ const Projects = () => {
       {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
-          Nuetros <strong className="yellow">Pryectos </strong>
+          Nuetros <strong className="yellow">Proyectos </strong>
         </h1>
         <p style={{ color: "black" }}>
         Aquí hay algunos proyectos en los que hemos trabajado recientemente.
