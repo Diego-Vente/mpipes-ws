@@ -13,7 +13,7 @@ const Skillset = () => {
       {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
-          Técnologias que <strong className="yellow">Usamos </strong>
+          Técnologias <strong className="yellow">Utilizadas </strong>
         </h1>
         
         <Techstack />
