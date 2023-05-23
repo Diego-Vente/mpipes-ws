@@ -32,10 +32,11 @@ const About = () => {
             </Row>
             <Row>
               <Col md={12} className="home-about-social">
-                <h1>ENCUENTRANOS EN</h1>
+                
                 <p>
                 Por favor, no dude en ponerse en contacto con nosotros y <span className="about-hl">conectarse.</span>
                 </p>
+                <h1>ENCUENTRANOS EN</h1>
                 <ul className="home-about-social-links">
                   <li className="social-icons">
                     <a
