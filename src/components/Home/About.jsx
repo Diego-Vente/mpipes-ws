@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import LaptopImg from "../../assets/home-main.svg";
+import LaptopImg from "../../assets/growth.png";
 import Tilt from "react-parallax-tilt";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiFillFacebook,
+  AiOutlineWhatsApp
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -32,48 +32,37 @@ const About = () => {
             </Row>
             <Row>
               <Col md={12} className="home-about-social">
-                
                 <p>
                 Por favor, no dude en ponerse en contacto con nosotros y <span className="about-hl">conectarse.</span>
                 </p>
                 <h1>ENCUENTRANOS EN</h1>
+              
                 <ul className="home-about-social-links">
                   <li className="social-icons">
                     <a
-                      href="https://github.com/19sajib"
+                      href="https://www.facebook.com/app.mobile.pipes"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour  home-social-icons"
-                      aria-label="github"
+                      aria-label="facebook"
                     >
-                      <AiFillGithub />
+                      <AiFillFacebook />
                     </a>
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://twitter.com/19sajib"
+                      href="https://api.whatsapp.com/send?phone=51922502087"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour  home-social-icons"
-                      aria-label="twitter"
+                      aria-label="whatsapp"
                     >
-                      <AiOutlineTwitter />
+                      <AiOutlineWhatsApp />
                     </a>
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.linkedin.com/in/19sajib/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-colour  home-social-icons"
-                      aria-label="linkedin"
-                    >
-                      <FaLinkedinIn />
-                    </a>
-                  </li>
-                  <li className="social-icons">
-                    <a
-                      href="https://www.instagram.com/19sajib"
+                      href="https://www.instagram.com/mobilepipes/"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"

@@ -1,7 +1,7 @@
 import {React, Linking} from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import homeLogo from '../assets/agile-orange.png';
+import homeLogo from '../assets/agile-dark.png';
 //import Particle from '../components/Particle';
 import About from '../components/Home/About';
 import Type from '../components/Home/Type';
@@ -47,10 +47,10 @@ const Home = () => {
               </h1>
 
               <div className="heading-name-btns-container" style={{ marginTop: 20 }}>
-                <Button className="heading-name-btns"   onClick={goToWsp}>
+                <Button className="heading-name-btns" onClick={goToWsp}>
                   Cotiza gratis
                 </Button>{' '}
-                <Button className="heading-name-btns"  onClick={goToProjects}>
+                <Button className="btn-secondary"  onClick={goToProjects}>
                   Ver trabajos
                 </Button>
               </div>  

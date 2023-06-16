@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../../assets/logo-dark.png";
+import logoMobile from "../../assets/logo-dark.png";
+import logoDesktop from "../../assets/logo-white.png";
+import logo from "../../assets/logo-white.png";
 // import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 // import { CgGitFork } from "react-icons/cg";
@@ -19,6 +21,7 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const [logoSrc, setLogoSrc] = useState(logoMobile);
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -27,6 +30,27 @@ function NavBar() {
       updateNavbar(false);
     }
   }
+  useEffect(() => {
+    function handleResize() {
+      updateLogoSource();
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  function updateLogoSource() {
+    if (window.innerWidth < 768) {
+      setLogoSrc(logoMobile);
+    } else {
+      setLogoSrc(logoDesktop);
+    }
+  }
+
+  useEffect(() => {
+    updateLogoSource();
+  }, []); // Run on component mount
 
   window.addEventListener("scroll", scrollHandler);
 
@@ -39,7 +63,8 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          
+          <img src={logoSrc} className="img-fluid logo" alt="brand" id="logoImage" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

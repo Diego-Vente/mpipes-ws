@@ -4,7 +4,7 @@ html {
   }
   
   .about-hl {
-    color: var(--letters-hl-1) !important; /* text color for about section hls */
+    color: var(--letters-hl) !important; /* text color for about section hls */
   }
   
   .purple {
@@ -25,7 +25,7 @@ html {
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background-color: var(--letters-hl); /* preload screen color */
+    background-color: var(--black); /* preload screen color */
     background-image: url(./assets/pre.svg), url(./assets/logo-white.png);
     background-repeat: no-repeat, no-repeat;
     background-position: center, center 100px;
@@ -83,7 +83,7 @@ html {
     transition: all 0.3s ease-out 0s !important;
     padding: 0.3rem 2rem !important;
     font-size: 1.2rem !important;
-    background-color: var(--white) !important; /* bg color of navbar*/
+    background-color: var(--black) !important; /* bg color of navbar*/
   }
   
   .navbar-toggler {
@@ -94,7 +94,7 @@ html {
   
   .navbar-toggler span {
     display: block !important;
-    background-color: var(--black) !important; /* menu and cross color */
+    background-color: var(--black) !important; /* navbar menu and cross color on mobile */
     height: 4px !important;
     width: 27px !important;
     margin-top: 5px !important;
@@ -137,7 +137,7 @@ html {
     opacity: 0.9 !important;
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 767px) {  /* navbar background color con mobile */
     .navbar {
       padding: 1rem 2rem !important;
       font-size: 1.4rem !important;
@@ -157,9 +157,17 @@ html {
   }
   
   .navbar-nav .nav-link {
-    color: var(--letters-alter) !important; /* navbar text color */
+    color: var(--white) !important; /* navbar text color */
     padding-right: 1rem !important;
     padding-left: 1rem !important;
+  }
+
+  @media (max-width: 767px) {  /* navbar text color con mobile */
+    .navbar-nav .nav-link {
+      color: var(--black) !important; /* navbar text color */
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+    }
   }
   
   .nav-link {
@@ -191,7 +199,7 @@ html {
     height: 5px;
     width: 0;
     border-radius: 16px;
-    background: var(--letters-hl); /* nav bar element hover */
+    background: var(--white); /* navbar element hover */
     bottom: 1px;
     left: 0;
     z-index: -1;
@@ -247,10 +255,18 @@ html {
     height: 100%;
   }
   
-  .home-header {
-    padding-top: 1px !important;
-    color:var(--letters-alter)
+  .home-header {  /* distancia de tamaño entre Main texto de Main section y navbar */
+    padding-top: 40px !important;
+    color:var(--letters-alter) /* text color of main text of main screen title */
   }
+
+
+  @media (max-width: 767px) {
+    .home-header {
+      padding-top: 1px !important;
+      color:var(--letters-alter)
+    }
+}
   
   .home-section {
     position: relative;
@@ -264,7 +280,7 @@ html {
   
   .home-content {
     padding: 5rem 0 2rem !important;
-    color: var(--black);
+    color: var(--black);  /* dont change anything */
     text-align: left;
   
   }
@@ -280,6 +296,8 @@ html {
     position: relative;
     font-size: 1.5em !important;
     pointer-events: auto;
+    color: black !important;
+
   }
 
   .heading-name-btns-container {
@@ -287,6 +305,8 @@ html {
     font-size: 1.0em !important;
     pointer-events: auto;
     padding-left: 25px !important;
+    color: black !important;
+
   }
 
   .heading {
@@ -297,11 +317,11 @@ html {
   .heading-name {
     font-size: 1.5em !important;
     padding-left: 25px !important;
-    color:var(--letters-alter)
+    color:var(--letters-alter) /* color de letras NO resaltantes en pantalla principal */
   }
   
   .main-name {
-    color: var(--letters-hl);
+    color: var(--letters-hl); /* color de letras resaltantes en pantalla principal */
   }
 
   @media (max-width: 767px) {
@@ -310,9 +330,6 @@ html {
       padding-left: 20px !important;
     }
   
-/*     .heading-name-btns {
-      
-    } */
     .img-main-screen{
       display: none;
     }
@@ -353,7 +370,7 @@ html {
     }
   }
   
-  .home-about-section {
+  .home-about-section {  /* color de About US section on main page */
     position: relative;
     padding-bottom: 70px !important;
     padding-top: 70px !important;
@@ -396,7 +413,7 @@ html {
     text-align: center !important;
     font-size: 1.2em !important;
     line-height: 2em !important;
-    background: #000000 !important;
+    background: #ffffff !important;
     border-radius: 50% !important;
     transition: 0.5s !important;
   }
@@ -432,15 +449,15 @@ html {
     padding-left: 15px;
   }
   
-  .icon-colour {
-    color: #ff851b !important;
+  .icon-colour { /* social icons color */
+    color: black !important;
   }
   
   /* --------- */
   /* Footer */
   /* --------- */
   .footer {
-    background-color: var(--letters-hl);
+    background-color: var(--black);
     bottom: 0 !important;
     padding-top: 10px !important;
     padding-bottom: 8px !important ;
@@ -454,7 +471,7 @@ html {
   
   .footer-copywright span {
    color: white;
-   font-size: 1rem;
+   font-size: 0.8rem;
   }
 
   .footer-body {
@@ -700,11 +717,25 @@ html {
   border-radius: 0px !important;
 }
 
-.btn-primary {
+.btn-primary {  /* config de botones */
   /* color: #fff !important; */
-  color: var(--white) !important;
-  background-color: var(--black) !important;
-  border-color: var(--black) !important;
+  color: var(--white) !important; /* text color */
+  background-color: var(--mpipes) !important;
+  border: 0;
+  border: none !important;
+
+  /* border-color: var(--black) !important; */
+
+  /* background-color: #623686 !important;
+  border-color: #623686 !important; */
+}
+
+.btn-secondary {  /* config de botones */
+  /* color: #fff !important; */
+  font-size: 1.5em !important;
+  color: var(--black) !important;
+  background-color: var(--white) !important;
+  /* border-color: var(--black) !important; */
 
   /* background-color: #623686 !important;
   border-color: #623686 !important; */
@@ -720,10 +751,17 @@ html {
 
 @media (max-width: 767px) {
   .btn-primary {
-    color: var(--white) !important;
-    background-color: var(--black) !important;
-    border-color: var(--black) !important;
+    color: var(--white) !important; /* text color */
+    background-color: var(--mpipes) !important;
+    border: 0;
+    border: none !important;
     margin-bottom: 0.5rem !important;
+  }
+  .btn-secondary {  /* config de botones */
+    font-size: 1.5em !important;
+    color: var(--black) !important;
+    background-color: var(--white) !important;
+
   }
   .navbar-nav .nav-item a::after {
     display: none !important;

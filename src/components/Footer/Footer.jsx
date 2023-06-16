@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiFillFacebook,
+  AiOutlineWhatsApp
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import logo from "../../assets/logo-dark.png";
+import logo from "../../assets/logo-white.png";
 
 const Footer = () => {
     let date = new Date();
@@ -19,47 +19,35 @@ const Footer = () => {
           </Col>
           <Col md="4" className="footer-copywright">
             <span style={{ paddingRight: 15 }} >Copyright © {year}</span>
-            
             <img src={logo} className="img-fluid logo" alt="brand" />
           </Col>
           <Col md="4" className="footer-body">
             <ul className="footer-icons">
               <li className="social-icons">
                 <a
-                  href="https://github.com/19sajib"
+                  href="https://www.facebook.com/app.mobile.pipes"
                   style={{ color: "white" }}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="github"
+                  aria-label="facebook"
                 >
-                  <AiFillGithub />
+                  <AiFillFacebook />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/19sajib"
+                  href="https://api.whatsapp.com/send?phone=51922502087"
                   style={{ color: "white" }}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="twitter"
+                  aria-label="whatsapp"
                 >
-                  <AiOutlineTwitter />
+                  <AiOutlineWhatsApp />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/19sajib/"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="linkedin"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/19sajib"
+                  href="https://www.instagram.com/mobilepipes/"
                   style={{ color: "white" }}
                   target="_blank" 
                   rel="noopener noreferrer"

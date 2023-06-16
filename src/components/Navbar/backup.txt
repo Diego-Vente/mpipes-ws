@@ -1,0 +1,89 @@
+import React, { useState, useEffect } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import logoMobile from "../../assets/logo-white-mobile.png";
+import logoDesktop from "../../assets/logo-white-desktop.png";
+import { Link } from "react-router-dom";
+import {
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineContacts,
+} from "react-icons/ai";
+import { GiSkills } from "react-icons/gi";
+import { CgFileDocument } from "react-icons/cg";
+
+function NavBar() {
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+  const [logoSrc, setLogoSrc] = useState(logoMobile);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      updateLogoSource();
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  function updateLogoSource() {
+    if (window.innerWidth < 768) {
+      setLogoSrc(logoMobile);
+    } else {
+      setLogoSrc(logoDesktop);
+    }
+  }
+
+  useEffect(() => {
+    updateLogoSource();
+  }, []); // Run on component mount
+
+  return (
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        <Navbar.Brand href="/" className="d-flex">
+          <img src={logoSrc} className="img-fluid logo" alt="brand" id="logoImage" />
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            {/* Rest of the code */}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default NavBar;
