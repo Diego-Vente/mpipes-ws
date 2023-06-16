@@ -24,23 +24,17 @@ const Contact = () => {
     } else {
       
       //  Please use your own credentials from emailjs or i will recive your email
-      
-    emailjs
-      .sendForm(
-        "service_niilndo",
-        "template_6z5idye",
-        form.current,
-        "VOBt6Akm1LhI5CZG-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      const subject = "Deseo consultar sus servicios de desarrollo!"
+      const recipient = "mobile.pipes@gmail.com"
+      const message = formData.message
+      //const url = 'mailto:${toMail}?subject=${subject}&body=${formData.message}';
+      const url = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+      try {
+        window.open(url, '_blank')
+      } catch (error) {
+        console.error('Error opening URL: ', error);
+      }
     }
     };
     
@@ -58,8 +52,8 @@ const Contact = () => {
                 <input type="email" name="reply_to" className="user" placeholder="Email" onChange={handleChange} />
                 <textarea name="message" className="user" placeholder="Mensaje" onChange={handleChange} />
                 <span className='not-done' >{notDone && "Please, fill all the input field"}</span>
-                <Button type="submit" className="button" disabled={done}>Enviar</Button>
-                <span className='done'>{done && "Thanks for contacting me and be sure i have recieved your mail. If you are testing this functionality then i am confirming this thing working perfectly fine. If you have any serious query then i will reply. Also if you need me, you can conatct me on Linkedin."}</span>
+                <Button type="submit" className="button" >Enviar</Button>
+                <span className='done'>{done && "Gracias por contactarnos y esté seguro de que hemos recibido su correo."}</span>
                 </form>
             </Col>
             </Row>
