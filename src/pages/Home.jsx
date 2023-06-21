@@ -32,19 +32,27 @@ const Home = () => {
           <Row>
             <Col md={5} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-              ¿Quieres hacer crecer tu negocio?{" "}
+              Hagamos crecer tu negocio{" "}
 {/*                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span> */}
               </h1>
 
               <h1 className="heading-name">
+              Hagamos <strong className="main-name"> crecer tu negocio </strong> 
+              Con las soluciones tecnológicas altamente efectivas de Mobile Pipes, optimizarás tus procesos,
+                 <strong className="main-name"> reducirás costos </strong>  
+                 y te liberarás de tareas <strong className="main-name">repetitivas.</strong> 
+              </h1>
+
+{/*               <h1 className="heading-name">
               ¿Necesitas <strong className="main-name"> optimizar </strong> 
                procesos,
                <strong className="main-name"> reducir costos </strong> 
                  y dejar tareas 
-                 <strong className="main-name"> repetitivas </strong>  para expandirte? Descubre cómo Mobile Pipes puede brindarte soluciones tecnológicas efectivas.
-              </h1>
+                 <strong className="main-name"> repetitivas </strong>  
+                 para expandirte? Descubre cómo Mobile Pipes puede brindarte soluciones tecnológicas efectivas.
+              </h1> */}
 
               <div className="heading-name-btns-container" style={{ marginTop: 20 }}>
                 <Button className="heading-name-btns" onClick={goToWsp}>
