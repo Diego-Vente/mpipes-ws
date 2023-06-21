@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiFillFacebook,
+  AiOutlineWhatsApp
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import './Social.css'
@@ -14,45 +14,35 @@ const Social = () => {
     <Row>
               <Col md={12} className="contact-social">
                 <div className='contact-text'>
-                <h1>FIND ME ON</h1>
+                <h1>ENCUENTRANOS EN</h1>
                 <p>
-                Please don't hesitate to reach out to me and <span className="yellow">connect.</span>
+                Porfavor no dude en escribirnos y <span className="yellow">conectarase.</span>
                 </p>
                 </div>
                 <ul className="contact-social-links">
                   <li className="contact-icons">
                     <a
-                      href="https://github.com/19sajib"
+                      href="https://www.facebook.com/app.mobile.pipes"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color  contact-social-icons"
                     >
-                      <AiFillGithub />
+                      <AiFillFacebook />
                     </a>
                   </li>
                   <li className="contact-icons">
                     <a
-                      href="https://twitter.com/19sajib"
+                      href="https://api.whatsapp.com/send?phone=51922502087"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color  contact-social-icons"
                     >
-                      <AiOutlineTwitter />
+                      <AiOutlineWhatsApp />
                     </a>
                   </li>
                   <li className="contact-icons">
                     <a
-                      href="https://www.linkedin.com/in/19sajib/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-color  contact-social-icons"
-                    >
-                      <FaLinkedinIn />
-                    </a>
-                  </li>
-                  <li className="contact-icons">
-                    <a
-                      href="https://www.instagram.com/19sajib"
+                      href="https://www.instagram.com/mobilepipes/"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color contact-social-icons"
