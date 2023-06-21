@@ -39,8 +39,8 @@ const Home = () => {
               </h1>
 
               <h1 className="heading-name">
-              Hagamos <strong className="main-name"> crecer tu negocio </strong> 
-              Con las soluciones tecnológicas altamente efectivas de Mobile Pipes, optimizarás tus procesos,
+              Con las <strong className="main-name"> soluciones </strong> 
+              tecnológicas altamente efectivas de Mobile Pipes, optimizarás tus procesos,
                  <strong className="main-name"> reducirás costos </strong>  
                  y te liberarás de tareas <strong className="main-name">repetitivas.</strong> 
               </h1>
