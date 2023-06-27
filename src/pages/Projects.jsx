@@ -58,7 +58,7 @@ const Projects = () => {
               title="Landing page"
               description="La landing page es una página web diseñada para proporcionar información relevante y atractiva sobre tu negocio. Es una herramienta efectiva para presentar tu empresa, productos o servicios de manera concisa y convincente. La landing page puede incluir detalles clave sobre el negocio, como su propósito, historia y valores. Además, puede resaltar productos o servicios destacados, mostrar testimonios de clientes satisfechos y proporcionar detalles de contacto para facilitar la comunicación. La página también puede contar con formularios de contacto o suscripción para captar clientes potenciales y permitirles obtener más información o recibir promociones. En resumen, una landing page bien diseñada y optimizada es una herramienta valiosa para atraer y convertir visitantes en clientes potenciales.."
               ghLink="https://api.whatsapp.com/send?phone=51922502087"
-              demoLink="https://api.whatsapp.com/send?phone=51922502087"
+              demoLink="https://rey-astral.netlify.app/"
 
             />
           </Col>

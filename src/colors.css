@@ -45,8 +45,9 @@
     --letters-hl-shadow: #ffad66;
     --letters-hl-strong: #ff7700;
     --letters-hl-1: #000000;
+    --main-darkmate: #232323;
 
-    --black: #000000; /* este color es usado en navbar,btns y preloader por igual */
+    --black: #232323; /* este color es usado en navbar,btns y preloader por igual */
     --black-ll: #4d4d4d;
     --black-hl: #030303;
 
